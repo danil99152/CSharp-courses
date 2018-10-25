@@ -1,0 +1,7 @@
+C:\Users\Danil\source\repos\BullsNCows\BullsNCows\bin\Debug\BullsNCows.exe.config
+C:\Users\Danil\source\repos\BullsNCows\BullsNCows\bin\Debug\BullsNCows.exe
+C:\Users\Danil\source\repos\BullsNCows\BullsNCows\bin\Debug\BullsNCows.pdb
+C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.csprojAssemblyReference.cache
+C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.csproj.CoreCompileInputs.cache
+C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.exe
+C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.pdb
