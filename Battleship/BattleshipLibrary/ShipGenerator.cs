@@ -8,10 +8,10 @@ namespace BattleshipLibrary
 {
     public class ShipGenerator
     {
-        protected const int one = 1;
-        protected const int two = 2;
-        protected const int three = 3;
-        protected const int four = 4;
+        protected const int four = 1;
+        protected const int three = 2;
+        protected const int two = 3;
+        protected const int one = 4;
         public int[,] Field1 = new int[10, 10];
         public static readonly string[] str1 = { "а", "б", "в", "г", "д", "е", "ж", "з", "и", "к" };
         public static readonly string[] str2 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
