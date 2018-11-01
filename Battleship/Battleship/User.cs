@@ -3,30 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BattleshipLibrary; 
 
 namespace BattleShip
 {
-    public class User: Meneger<User>
+    public class User: Meneger<User, Bot> 
     {
-        ShipGenerator generator = new ShipGenerator();
         public User()
         {
             Number = 0;
-            generator.UFour();
+            Four<User>();
             while (Number < three)
             {
-                generator.UThree();
+                Three<User>();
             }
             Number = 0;
             while (Number < two)
             {
-                generator.UTwo();
+                Two<User>();
             }
             Number = 0;
             while (Number < one)
             {
-                generator.UOne();
+                One<User>();
             }
         }
 

@@ -1,6 +1,0 @@
-C:\Users\Danil\source\repos\Homework\Battleship\BattleshipLibrary\bin\Debug\BattleshipLibrary.dll
-C:\Users\Danil\source\repos\Homework\Battleship\BattleshipLibrary\bin\Debug\BattleshipLibrary.pdb
-C:\Users\Danil\source\repos\Homework\Battleship\BattleshipLibrary\obj\Debug\BattleshipLibrary.csprojAssemblyReference.cache
-C:\Users\Danil\source\repos\Homework\Battleship\BattleshipLibrary\obj\Debug\BattleshipLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Danil\source\repos\Homework\Battleship\BattleshipLibrary\obj\Debug\BattleshipLibrary.dll
-C:\Users\Danil\source\repos\Homework\Battleship\BattleshipLibrary\obj\Debug\BattleshipLibrary.pdb

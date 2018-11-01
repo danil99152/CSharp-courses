@@ -3,12 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BattleshipLibrary;
 
 namespace BattleShip
 {
-    public class Battleship: ShipGenerator
+    public class Battleship
     {
+        protected const int four = 1;
+        protected const int three = 2;
+        protected const int two = 3;
+        protected const int one = 4;
+        public int[,] Field1 = new int[10, 10];
+        public static readonly string[] str1 = { "а", "б", "в", "г", "д", "е", "ж", "з", "и", "к" };
+        public static readonly string[] str2 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        public int Step = new int();
+        protected int[] Letter = new int[101];
+        protected int[] Index = new int[101];
+        public int Points = 0;
+        public static int Indent = 2;
+        public int Number = 0;
+
+        protected static int[,] BotField = new int[10, 10];
+
+        protected static int[,] UserField = new int[10, 10];
+
         public void Output(int[,] Field)
         {
             if (Indent > 20)
