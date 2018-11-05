@@ -11,20 +11,20 @@ namespace BattleShip
         public User()
         {
             Number = 0;
-            Four<User>();
+            Four(UserField.field);
             while (Number < three)
             {
-                Three<User>();
+                Three(UserField.field);
             }
             Number = 0;
             while (Number < two)
             {
-                Two<User>();
+                Two(UserField.field);
             }
             Number = 0;
             while (Number < one)
             {
-                One<User>();
+                One(UserField.field);
             }
         }
 

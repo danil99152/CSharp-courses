@@ -10,20 +10,20 @@ namespace BattleShip
     {
         public Bot()
         {
-            Four();
+            Four(BotField.field);
             while (Number < three)
             {
-                Three();
+                Three(BotField.field);
             }
             Number = 0;
             while (Number < two)
             {
-                Two();
+                Two(BotField.field);
             }
             Number = 0;
             while (Number < one)
             {
-                One();
+                One(BotField.field);
             }
         }
 
