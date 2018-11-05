@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class Meneger: Battleship
+    public class Ship: Battleship
     {
         public void Four(int[,] Field)
         {
