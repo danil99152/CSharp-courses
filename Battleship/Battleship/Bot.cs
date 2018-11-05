@@ -44,6 +44,28 @@ namespace BattleShip
             }
         }
 
+        public bool HitbyBot(int i, int j)
+        {
+            if (UserField.field[i, j] == 0)
+            {
+                ShipField.field[i, j] = 3;
+                UserField.field[i, j] = 3;
+                return false;
+            }
+            if (UserField.field[i, j] == 1)
+            {
+                ShipField.field[i, j] = 2;
+                UserField.field[i, j] = 2;
+                Stroke(UserField.field, i, j);
+                return true;
+            }
+            if (UserField.field[i, j] > 1)
+            {
+                return false;
+            }
+            return false;
+        }
+
         private void Random()
         {
             var random = new Random(DateTime.Now.Millisecond);
@@ -53,6 +75,17 @@ namespace BattleShip
             {
                 Random();
             }
+        }
+
+        public bool Lose()
+        {
+            if (Points == 20)
+            {
+                Console.SetCursorPosition(10, 0);
+                Console.Write("Вы проиграли!");
+                return true;
+            }
+            return false;
         }
     }
 }

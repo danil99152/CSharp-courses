@@ -19,7 +19,7 @@ namespace BattleShip
                 {
                     User.Output(User.ShipField.field);
                     User.Strike();
-                    if (User.Lose())
+                    if (User.Win())
                     {
                         break;
                     }
