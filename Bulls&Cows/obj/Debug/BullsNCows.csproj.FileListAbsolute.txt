@@ -5,3 +5,10 @@ C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.csprojAss
 C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.csproj.CoreCompileInputs.cache
 C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.exe
 C:\Users\Danil\source\repos\BullsNCows\BullsNCows\obj\Debug\BullsNCows.pdb
+C:\Users\Danil\source\repos\Homework\Bulls&Cows\bin\Debug\BullsNCows.exe.config
+C:\Users\Danil\source\repos\Homework\Bulls&Cows\bin\Debug\BullsNCows.exe
+C:\Users\Danil\source\repos\Homework\Bulls&Cows\bin\Debug\BullsNCows.pdb
+C:\Users\Danil\source\repos\Homework\Bulls&Cows\obj\Debug\BullsNCows.csprojAssemblyReference.cache
+C:\Users\Danil\source\repos\Homework\Bulls&Cows\obj\Debug\BullsNCows.csproj.CoreCompileInputs.cache
+C:\Users\Danil\source\repos\Homework\Bulls&Cows\obj\Debug\BullsNCows.exe
+C:\Users\Danil\source\repos\Homework\Bulls&Cows\obj\Debug\BullsNCows.pdb

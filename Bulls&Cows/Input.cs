@@ -50,7 +50,7 @@ namespace BullsNCows
 
         public string CompRandInput()
         {
-            var rand = new Random();
+            var rand = new Random(DateTime.Now.Millisecond);
             string res = rand.Next(0, 9).ToString();
             while (res.Length <= 3)
             {
