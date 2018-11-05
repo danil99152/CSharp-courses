@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class Bot : Meneger<User,Bot>
+    public class Bot : Meneger
     {
         public Bot()
         {
@@ -49,7 +49,7 @@ namespace BattleShip
             var random = new Random(DateTime.Now.Millisecond);
             Letter[Step] = random.Next(9);
             Index[Step] = random.Next(9);
-            if (Field1[Index[Step], Letter[Step]] > 0)
+            if (Field1.field[Index[Step], Letter[Step]] > 0)
             {
                 Random();
             }

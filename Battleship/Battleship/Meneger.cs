@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class Meneger<U, B>: Battleship 
-        where U: User 
-        where B: Bot
+    public class Meneger: Battleship
     {
         public bool Win<U>()
         {
@@ -34,21 +32,21 @@ namespace BattleShip
 
         public bool Hit<U>(int i, int j)
         {
-            if (BotField[i, j] == 0)
+            if (BotField.field[i, j] == 0)
             {
-                BotField[i, j] = 3;
-                Field1[i, j] = 3;
-                Output(Field1);
+                BotField.field[i, j] = 3;
+                Field1.field[i, j] = 3;
+                Output(Field1.field);
                 Console.SetCursorPosition(30, 0);
                 Console.Write("Промах!   ");
                 return false;
             }
-            if (BotField[i, j] == 1)
+            if (BotField.field[i, j] == 1)
             {
-                BotField[i, j] = 2;
-                Field1[i, j] = 2;
-                Stroke(BotField, i, j);
-                Output(Field1);
+                BotField.field[i, j] = 2;
+                Field1.field[i, j] = 2;
+                Stroke(BotField.field, i, j);
+                Output(Field1.field);
                 Console.SetCursorPosition(30, 0);
                 Console.Write("Попадание!");
                 return true;
@@ -64,20 +62,20 @@ namespace BattleShip
 
         public bool Hit(int i, int j)
         {
-            if (UserField[i, j] == 0)
+            if (UserField.field[i, j] == 0)
             {
-                Field1[i, j] = 3;
-                UserField[i, j] = 3;
+                Field1.field[i, j] = 3;
+                UserField.field[i, j] = 3;
                 return false;
             }
-            if (UserField[i, j] == 1)
+            if (UserField.field[i, j] == 1)
             {
-                Field1[i, j] = 2;
-                UserField[i, j] = 2;
-                Stroke(UserField, i, j);
+                Field1.field[i, j] = 2;
+                UserField.field[i, j] = 2;
+                Stroke(UserField.field, i, j);
                 return true;
             }
-            if (UserField[i, j] > 1)
+            if (UserField.field[i, j] > 1)
             {
                 return false;
             }
@@ -94,7 +92,7 @@ namespace BattleShip
                 y = random.Next(5);
                 for (int i = y; i < y + 4; i++)
                 {
-                    UserField[i, x] = 1;
+                    UserField.field[i, x] = 1;
                 }
                 return;
             }
@@ -103,7 +101,7 @@ namespace BattleShip
                 x = random.Next(5);
                 for (int j = x; j < x + 4; j++)
                 {
-                    UserField[y, j] = 1;
+                    UserField.field[y, j] = 1;
                 }
                 return;
             }
@@ -112,14 +110,14 @@ namespace BattleShip
             {
                 for (int i = y; i < y + 4; i++)
                 {
-                    UserField[i, x] = 1;
+                    UserField.field[i, x] = 1;
                 }
             }
             else
             {
                 for (int j = x; j < x + 4; j++)
                 {
-                    UserField[y, j] = 1;
+                    UserField.field[y, j] = 1;
                 }
             }
         }
@@ -151,7 +149,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (UserField[i, j] != 0)
+                        if (UserField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -159,7 +157,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 3; j++)
                 {
-                    UserField[y, j] = 1;
+                    UserField.field[y, j] = 1;
                 }
                 Number++;
                 return;
@@ -188,7 +186,7 @@ namespace BattleShip
                             break;
                         }
                         {
-                            if (UserField[i, j] != 0)
+                            if (UserField.field[i, j] != 0)
                             {
                                 return;
                             }
@@ -197,7 +195,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 3; i++)
                 {
-                    UserField[i, x] = 1;
+                    UserField.field[i, x] = 1;
                 }
                 Number++;
                 return;
@@ -225,7 +223,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (UserField[i, j] != 0)
+                        if (UserField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -233,7 +231,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 3; i++)
                 {
-                    UserField[i, x] = 1;
+                    UserField.field[i, x] = 1;
                 }
                 Number++;
             }
@@ -259,7 +257,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (UserField[i, j] != 0)
+                        if (UserField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -267,7 +265,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 3; j++)
                 {
-                    UserField[y, j] = 1;
+                    UserField.field[y, j] = 1;
                 }
                 Number++;
             }
@@ -300,7 +298,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (UserField[i, j] != 0)
+                        if (UserField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -308,7 +306,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 2; j++)
                 {
-                    UserField[y, j] = 1;
+                    UserField.field[y, j] = 1;
                 }
                 Number++;
                 return;
@@ -336,7 +334,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (UserField[i, j] != 0)
+                        if (UserField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -344,7 +342,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 2; i++)
                 {
-                    UserField[i, x] = 1;
+                    UserField.field[i, x] = 1;
                 }
                 Number++;
                 return;
@@ -372,7 +370,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (UserField[i, j] != 0)
+                        if (UserField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -380,7 +378,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 2; i++)
                 {
-                    UserField[i, x] = 1;
+                    UserField.field[i, x] = 1;
                 }
                 Number++;
             }
@@ -406,7 +404,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (UserField[i, j] != 0)
+                        if (UserField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -414,7 +412,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 2; j++)
                 {
-                    UserField[y, j] = 1;
+                    UserField.field[y, j] = 1;
                 }
                 Number++;
             }
@@ -444,13 +442,13 @@ namespace BattleShip
                     {
                         break;
                     }
-                    if (UserField[i, j] != 0)
+                    if (UserField.field[i, j] != 0)
                     {
                         return;
                     }
                 }
             }
-            UserField[y, x] = 1;
+            UserField.field[y, x] = 1;
             Number++;
         }
 
@@ -464,7 +462,7 @@ namespace BattleShip
                 y = random.Next(5);
                 for (int i = y; i < y + 4; i++)
                 {
-                    BotField[i, x] = 1;
+                    BotField.field[i, x] = 1;
                 }
                 return;
             }
@@ -473,7 +471,7 @@ namespace BattleShip
                 x = random.Next(5);
                 for (int j = x; j < x + 4; j++)
                 {
-                    BotField[y, j] = 1;
+                    BotField.field[y, j] = 1;
                 }
                 return;
             }
@@ -482,14 +480,14 @@ namespace BattleShip
             {
                 for (int i = y; i < y + 4; i++)
                 {
-                    BotField[i, x] = 1;
+                    BotField.field[i, x] = 1;
                 }
             }
             else
             {
                 for (int j = x; j < x + 4; j++)
                 {
-                    BotField[y, j] = 1;
+                    BotField.field[y, j] = 1;
                 }
             }
         }
@@ -521,7 +519,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -529,7 +527,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 3; j++)
                 {
-                    BotField[y, j] = 1;
+                    BotField.field[y, j] = 1;
                 }
                 Number++;
                 return;
@@ -557,7 +555,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -565,7 +563,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 3; i++)
                 {
-                    BotField[i, x] = 1;
+                    BotField.field[i, x] = 1;
                 }
                 Number++;
                 return;
@@ -593,7 +591,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -602,7 +600,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 3; i++)
                 {
-                    BotField[i, x] = 1;
+                    BotField.field[i, x] = 1;
                 }
                 Number++;
             }
@@ -628,7 +626,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -636,7 +634,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 3; j++)
                 {
-                    BotField[y, j] = 1;
+                    BotField.field[y, j] = 1;
                 }
                 Number++;
             }
@@ -669,7 +667,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -677,7 +675,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 2; j++)
                 {
-                    BotField[y, j] = 1;
+                    BotField.field[y, j] = 1;
                 }
                 Number++;
                 return;
@@ -705,7 +703,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -713,7 +711,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 2; i++)
                 {
-                    BotField[i, x] = 1;
+                    BotField.field[i, x] = 1;
                 }
                 Number++;
                 return;
@@ -741,7 +739,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -750,7 +748,7 @@ namespace BattleShip
                 }
                 for (int i = y; i < y + 2; i++)
                 {
-                    BotField[i, x] = 1;
+                    BotField.field[i, x] = 1;
                 }
                 Number++;
             }
@@ -776,7 +774,7 @@ namespace BattleShip
                         {
                             break;
                         }
-                        if (BotField[i, j] != 0)
+                        if (BotField.field[i, j] != 0)
                         {
                             return;
                         }
@@ -785,7 +783,7 @@ namespace BattleShip
                 }
                 for (int j = x; j < x + 2; j++)
                 {
-                    BotField[y, j] = 1;
+                    BotField.field[y, j] = 1;
                 }
                 Number++;
             }
@@ -815,13 +813,13 @@ namespace BattleShip
                     {
                         break;
                     }
-                    if (BotField[i, j] != 0)
+                    if (BotField.field[i, j] != 0)
                     {
                         return;
                     }
                 }
             }
-            BotField[y, x] = 1;
+            BotField.field[y, x] = 1;
             Number++;
         }
     }

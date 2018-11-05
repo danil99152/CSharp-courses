@@ -17,7 +17,7 @@ namespace BattleShip
             {
                 while (true)
                 {
-                    User.Output(User.Field1);
+                    User.Output(User.Field1.field);
                     User.Strike();
                     if (User.Win())
                     {

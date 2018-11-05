@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class User: Meneger<User, Bot> 
+    public class User: Meneger
     {
         public User()
         {
