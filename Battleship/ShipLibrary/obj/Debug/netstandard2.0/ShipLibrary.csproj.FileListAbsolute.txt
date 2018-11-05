@@ -1,0 +1,13 @@
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\bin\Debug\netstandard2.0\ShipLibrary.deps.json
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\bin\Debug\netstandard2.0\ShipLibrary.dll
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\bin\Debug\netstandard2.0\ShipLibrary.pdb
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\bin\Debug\netstandard2.0\BattleShip.exe
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\bin\Debug\netstandard2.0\BattleShip.pdb
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\bin\Debug\netstandard2.0\BattleShip.exe.config
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\obj\Debug\netstandard2.0\ShipLibrary.csprojAssemblyReference.cache
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\obj\Debug\netstandard2.0\ShipLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\obj\Debug\netstandard2.0\ShipLibrary.AssemblyInfoInputs.cache
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\obj\Debug\netstandard2.0\ShipLibrary.AssemblyInfo.cs
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\obj\Debug\netstandard2.0\ShipLibrary.csproj.CopyComplete
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\obj\Debug\netstandard2.0\ShipLibrary.dll
+C:\Users\Danil\source\repos\Homework\Battleship\ShipLibrary\obj\Debug\netstandard2.0\ShipLibrary.pdb

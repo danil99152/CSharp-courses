@@ -36,6 +36,7 @@ namespace BattleShip
                     yes = false;
                 }
             }
+            Console.ReadKey();
         }
     }
 }

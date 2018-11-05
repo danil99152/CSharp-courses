@@ -10,6 +10,9 @@ namespace BattleShip
     {
         public User()
         {
+            ShipRepository repository = new ShipRepository();
+            repository.InitShips();
+
             Number = 0;
             Four(UserField.field);
             while (Number < three)

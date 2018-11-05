@@ -10,6 +10,10 @@ namespace BattleShip
     {
         public Bot()
         {
+            ShipRepository repository = new ShipRepository();
+            repository.InitShips();
+
+            Number = 0;
             Four(BotField.field);
             while (Number < three)
             {
