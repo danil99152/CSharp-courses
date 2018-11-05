@@ -57,6 +57,8 @@ namespace BattleShip
                 ShipField.field[i, j] = 2;
                 UserField.field[i, j] = 2;
                 Stroke(UserField.field, i, j);
+                Console.SetCursorPosition(30, 0);
+                Console.WriteLine("Противник попал!");
                 return true;
             }
             if (UserField.field[i, j] > 1)
