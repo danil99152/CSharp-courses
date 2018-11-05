@@ -29,14 +29,14 @@ namespace BattleShip
 
         public void Strike()
         {
-            if (Win())
+            if (Lose())
             {
                 return;
             }
             Random();
             Console.SetCursorPosition(30, Indent++);
             Console.WriteLine("Выстрел противника: " + str1[Letter[Step]] + (Index[Step] + 1));
-            if (Hit(Index[Step], Letter[Step]))
+            if (HitbyBot(Index[Step], Letter[Step]))
             {
                 Step++;
                 Points++;
@@ -49,7 +49,7 @@ namespace BattleShip
             var random = new Random(DateTime.Now.Millisecond);
             Letter[Step] = random.Next(9);
             Index[Step] = random.Next(9);
-            if (Field1.field[Index[Step], Letter[Step]] > 0)
+            if (ShipField.field[Index[Step], Letter[Step]] > 0)
             {
                 Random();
             }

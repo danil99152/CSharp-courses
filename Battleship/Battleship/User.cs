@@ -30,7 +30,7 @@ namespace BattleShip
 
         public void Strike()
         {
-            if (Win<User>())
+            if (Win())
             {
                 return;
             }
@@ -88,7 +88,7 @@ namespace BattleShip
                 }
             }
             Index[Step] = Convert.ToInt32(Console.ReadLine()) - 1;
-            if (Hit<User>(Index[Step], Letter[Step]))
+            if (HitbyUser(Index[Step], Letter[Step]))
             {
                 Points++;
                 Strike();

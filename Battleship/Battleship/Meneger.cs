@@ -8,7 +8,8 @@ namespace BattleShip
 {
     public class Meneger: Battleship
     {
-        public bool Win<U>()
+
+        public bool Win()
         {
             if (Points == 20)
             {
@@ -19,7 +20,7 @@ namespace BattleShip
             return false;
         }
         
-        public bool Win() 
+        public bool Lose() 
         {
             if (Points == 20)
             {
@@ -30,13 +31,13 @@ namespace BattleShip
             return false;
         }
 
-        public bool Hit<U>(int i, int j)
+        public bool HitbyUser(int i, int j)
         {
             if (BotField.field[i, j] == 0)
             {
                 BotField.field[i, j] = 3;
-                Field1.field[i, j] = 3;
-                Output(Field1.field);
+                ShipField.field[i, j] = 3;
+                Output(ShipField.field);
                 Console.SetCursorPosition(30, 0);
                 Console.Write("Промах!   ");
                 return false;
@@ -44,9 +45,9 @@ namespace BattleShip
             if (BotField.field[i, j] == 1)
             {
                 BotField.field[i, j] = 2;
-                Field1.field[i, j] = 2;
+                ShipField.field[i, j] = 2;
                 Stroke(BotField.field, i, j);
-                Output(Field1.field);
+                Output(ShipField.field);
                 Console.SetCursorPosition(30, 0);
                 Console.Write("Попадание!");
                 return true;
@@ -60,17 +61,17 @@ namespace BattleShip
         }
 
 
-        public bool Hit(int i, int j)
+        public bool HitbyBot(int i, int j)
         {
             if (UserField.field[i, j] == 0)
             {
-                Field1.field[i, j] = 3;
+                ShipField.field[i, j] = 3;
                 UserField.field[i, j] = 3;
                 return false;
             }
             if (UserField.field[i, j] == 1)
             {
-                Field1.field[i, j] = 2;
+                ShipField.field[i, j] = 2;
                 UserField.field[i, j] = 2;
                 Stroke(UserField.field, i, j);
                 return true;

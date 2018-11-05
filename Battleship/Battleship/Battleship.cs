@@ -22,7 +22,7 @@ namespace BattleShip
         public static int Indent = 2;
         public int Number = 0;
 
-        public Field Field1 = new Field();
+        public Field ShipField = new Field();
         public Field UserField = new Field();
         public Field BotField = new Field(); 
 
@@ -87,6 +87,7 @@ namespace BattleShip
                     break;
             }
         }
+
         protected void Stroke(int[,] Field, int i, int j)
         {
             int Long = 1;
@@ -154,7 +155,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            Field1.field[k, l] = 3;
+                            ShipField.field[k, l] = 3;
                         }
                     }
                 }
@@ -223,7 +224,7 @@ namespace BattleShip
                         if (Field[l, k] != 2)
                         {
                             Field[l, k] = 3;
-                            Field1.field[l, k] = 3;
+                            ShipField.field[l, k] = 3;
                         }
                     }
                 }
@@ -247,7 +248,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            Field1.field[k, l] = 3;
+                            ShipField.field[k, l] = 3;
                         }
                     }
                 }
