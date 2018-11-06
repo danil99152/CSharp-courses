@@ -6,34 +6,31 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class User: Ship
+    public class User: Meneger<User, Bot> 
     {
         public User()
         {
-            ShipRepository repository = new ShipRepository();
-            repository.InitShips();
-
             Number = 0;
-            Four(UserField.field);
+            Four<User>();
             while (Number < three)
             {
-                Three(UserField.field);
+                Three<User>();
             }
             Number = 0;
             while (Number < two)
             {
-                Two(UserField.field);
+                Two<User>();
             }
             Number = 0;
             while (Number < one)
             {
-                One(UserField.field);
+                One<User>();
             }
         }
 
         public void Strike()
         {
-            if (Win())
+            if (Win<User>())
             {
                 return;
             }
@@ -91,52 +88,11 @@ namespace BattleShip
                 }
             }
             Index[Step] = Convert.ToInt32(Console.ReadLine()) - 1;
-            if (HitbyUser(Index[Step], Letter[Step]))
+            if (Hit<User>(Index[Step], Letter[Step]))
             {
                 Points++;
                 Strike();
             }
-        }
-
-
-        public bool HitbyUser(int i, int j)
-        {
-            if (BotField.field[i, j] == 0)
-            {
-                BotField.field[i, j] = 3;
-                ShipField.field[i, j] = 3;
-                Output(ShipField.field);
-                Console.SetCursorPosition(30, 0);
-                Console.WriteLine("Промах!");
-                return false;
-            }
-            if (BotField.field[i, j] == 1)
-            {
-                BotField.field[i, j] = 2;
-                ShipField.field[i, j] = 2;
-                Stroke(BotField.field, i, j);
-                Output(ShipField.field);
-                Console.SetCursorPosition(30, 0);
-                Console.WriteLine("Попадание!");
-                return true;
-            }
-            Console.SetCursorPosition(30, 0);
-            Console.WriteLine("Нельзя стрелять в эту клетку");
-            Console.SetCursorPosition(30, 4);
-            Console.WriteLine();
-            Step--;
-            return true;
-        }
-
-        public bool Win()
-        {
-            if (Points == 20)
-            {
-                Console.SetCursorPosition(10, 0);
-                Console.Write("Вы победили!");
-                return true;
-            }
-            return false;
         }
     }
 }

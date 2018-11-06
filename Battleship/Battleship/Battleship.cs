@@ -12,7 +12,7 @@ namespace BattleShip
         protected const int three = 2;
         protected const int two = 3;
         protected const int one = 4;
-        
+        public int[,] Field1 = new int[10, 10];
         public static readonly string[] str1 = { "а", "б", "в", "г", "д", "е", "ж", "з", "и", "к" };
         public static readonly string[] str2 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
         public int Step = new int();
@@ -22,9 +22,9 @@ namespace BattleShip
         public static int Indent = 2;
         public int Number = 0;
 
-        public Field ShipField = new Field();
-        public Field UserField = new Field();
-        public Field BotField = new Field(); 
+        protected static int[,] BotField = new int[10, 10];
+
+        protected static int[,] UserField = new int[10, 10];
 
         public void Output(int[,] Field)
         {
@@ -47,7 +47,7 @@ namespace BattleShip
                 for (int j = 0; j < 10; j++)
                 {
                     Console.SetCursorPosition(2 * j + 3, i + 1);
-                    Part(UserField.field[i, j]);
+                    Part(UserField[i, j]);
                 }
             }
             for (int i = 0; i < 10; i++)
@@ -87,7 +87,6 @@ namespace BattleShip
                     break;
             }
         }
-
         protected void Stroke(int[,] Field, int i, int j)
         {
             int Long = 1;
@@ -155,7 +154,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            ShipField.field[k, l] = 3;
+                            Field1[k, l] = 3;
                         }
                     }
                 }
@@ -224,7 +223,7 @@ namespace BattleShip
                         if (Field[l, k] != 2)
                         {
                             Field[l, k] = 3;
-                            ShipField.field[l, k] = 3;
+                            Field1[l, k] = 3;
                         }
                     }
                 }
@@ -248,7 +247,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            ShipField.field[k, l] = 3;
+                            Field1[k, l] = 3;
                         }
                     }
                 }

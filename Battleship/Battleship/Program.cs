@@ -17,14 +17,14 @@ namespace BattleShip
             {
                 while (true)
                 {
-                    User.Output(User.ShipField.field);
+                    User.Output(User.Field1);
                     User.Strike();
                     if (User.Win())
                     {
                         break;
                     }
                     Bot.Strike();
-                    if (Bot.Lose())
+                    if (Bot.Win())
                     {
                         break;
                     }
@@ -36,7 +36,6 @@ namespace BattleShip
                     yes = false;
                 }
             }
-            Console.ReadKey();
         }
     }
 }
