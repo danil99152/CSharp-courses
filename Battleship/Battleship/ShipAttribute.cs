@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    class ShipAttribute: Attribute
+    public class ShipAttribute: Attribute
     {
     }
 }

@@ -3,7 +3,7 @@ using System;
 
 namespace ShipLibrary
 {
-    public class Ships : Ship
+    public abstract class Ships : Ship
     {
         public override void Four(int[,] Field)
         {
