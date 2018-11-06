@@ -10,6 +10,8 @@ namespace BattleShip
     {
         public static void Main(string[] args)
         {
+            //    ShipRepository repository = new ShipRepository();
+            //    repository.InitShips();
             var User = new User();
             var Bot = new Bot();
             Boolean yes = true;

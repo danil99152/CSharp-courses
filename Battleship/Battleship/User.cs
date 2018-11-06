@@ -8,24 +8,30 @@ namespace BattleShip
 {
     public class User: ShipGenerator
     {
+        /* public User()
+           {
+               Number = 0;
+               Four(UserField);
+               while (Number < 2)
+               {
+                   Three(UserField);
+               }
+               Number = 0;
+               while (Number < 3)
+               {
+                   Two(UserField);
+               }
+               Number = 0;
+               while (Number < 4)
+               {
+                   One(UserField);
+               }
+           } */
+
+        ShipRepository repository = new ShipRepository();
         public User()
         {
-            Number = 0;
-            Four(UserField);
-            while (Number < 2)
-            {
-                Three(UserField);
-            }
-            Number = 0;
-            while (Number < 3)
-            {
-                Two(UserField);
-            }
-            Number = 0;
-            while (Number < 4)
-            {
-                One(UserField);
-            }
+            repository.InitShips();
         }
 
         public bool HitByUser(int i, int j)

@@ -8,25 +8,32 @@ namespace BattleShip
 {
     public class Bot : ShipGenerator
     {
+        /*  public Bot()
+            {
+                Number = 0;
+                Four(BotField);
+                while (Number < 2)
+                {
+                    Three(BotField);
+                }
+                Number = 0;
+                while (Number < 3)
+                {
+                    Two(BotField);
+                }
+                Number = 0;
+                while (Number < 4)
+                {
+                    One(BotField);
+                }
+            } */
+
+        ShipRepository repository = new ShipRepository();
         public Bot()
         {
-            Number = 0;
-            Four(BotField);
-            while (Number < 2)
-            {
-                Three(BotField);
-            }
-            Number = 0;
-            while (Number < 3)
-            {
-                Two(BotField);
-            }
-            Number = 0;
-            while (Number < 4)
-            {
-                One(BotField);
-            }
+            repository.InitShips();
         }
+        
 
         public bool HitByBot(int i, int j)
         {
