@@ -6,37 +6,61 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class Bot : Meneger<User,Bot>
+    public class Bot : ShipGenerator
     {
         public Bot()
         {
-            Four();
-            while (Number < three)
+            Four(BotField);
+            while (Number < 2)
             {
-                Three();
+                Three(BotField);
             }
             Number = 0;
-            while (Number < two)
+            while (Number < 3)
             {
-                Two();
+                Two(BotField);
             }
             Number = 0;
-            while (Number < one)
+            while (Number < 4)
             {
-                One();
+                One(BotField);
             }
+        }
+
+        public bool HitByBot(int i, int j)
+        {
+            if (UserField[i, j] == 0)
+            {
+                ShipField[i, j] = 3;
+                UserField[i, j] = 3;
+                return false;
+            }
+            if (UserField[i, j] == 1)
+            {
+                ShipField[i, j] = 2;
+                UserField[i, j] = 2;
+                Stroke(UserField, i, j);
+                Console.SetCursorPosition(30, 0);
+                Console.WriteLine("Противник попал!");
+                return true;
+            }
+            if (UserField[i, j] > 1)
+            {
+                return false;
+            }
+            return false;
         }
 
         public void Strike()
         {
-            if (Win())
+            if (Lose())
             {
                 return;
             }
             Random();
             Console.SetCursorPosition(30, Indent++);
             Console.WriteLine("Выстрел противника: " + str1[Letter[Step]] + (Index[Step] + 1));
-            if (Hit(Index[Step], Letter[Step]))
+            if (HitByBot(Index[Step], Letter[Step]))
             {
                 Step++;
                 Points++;
@@ -49,10 +73,21 @@ namespace BattleShip
             var random = new Random(DateTime.Now.Millisecond);
             Letter[Step] = random.Next(9);
             Index[Step] = random.Next(9);
-            if (Field1[Index[Step], Letter[Step]] > 0)
+            if (ShipField[Index[Step], Letter[Step]] > 0)
             {
                 Random();
             }
+        }
+
+        public bool Lose()
+        {
+            if (Points == 20)
+            {
+                Console.SetCursorPosition(10, 0);
+                Console.Write("Вы проиграли!");
+                return true;
+            }
+            return false;
         }
     }
 }

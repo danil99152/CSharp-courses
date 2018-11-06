@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 namespace BattleShip
 {
     public class Battleship
-    {
-        protected const int four = 1;
-        protected const int three = 2;
-        protected const int two = 3;
-        protected const int one = 4;
-        public int[,] Field1 = new int[10, 10];
+    {      
         public static readonly string[] str1 = { "а", "б", "в", "г", "д", "е", "ж", "з", "и", "к" };
         public static readonly string[] str2 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
         public int Step = new int();
@@ -23,7 +18,7 @@ namespace BattleShip
         public int Number = 0;
 
         protected static int[,] BotField = new int[10, 10];
-
+        public int[,] ShipField = new int[10, 10];
         protected static int[,] UserField = new int[10, 10];
 
         public void Output(int[,] Field)
@@ -154,7 +149,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            Field1[k, l] = 3;
+                            ShipField[k, l] = 3;
                         }
                     }
                 }
@@ -223,7 +218,7 @@ namespace BattleShip
                         if (Field[l, k] != 2)
                         {
                             Field[l, k] = 3;
-                            Field1[l, k] = 3;
+                            ShipField[l, k] = 3;
                         }
                     }
                 }
@@ -247,7 +242,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            Field1[k, l] = 3;
+                            ShipField[k, l] = 3;
                         }
                     }
                 }

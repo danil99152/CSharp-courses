@@ -12,3 +12,10 @@ C:\Users\Danil\Downloads\Battleship-master\Battleship-master\BattleShip\obj\Debu
 C:\Users\Danil\Downloads\Battleship-master\Battleship-master\BattleShip\obj\Debug\BattleShip.csproj.CoreCompileInputs.cache
 C:\Users\Danil\Downloads\Battleship-master\Battleship-master\BattleShip\obj\Debug\BattleShip.exe
 C:\Users\Danil\Downloads\Battleship-master\Battleship-master\BattleShip\obj\Debug\BattleShip.pdb
+C:\Users\Danil\source\repos\Homework\Battleship\BattleShip\bin\Debug\BattleShip.exe.config
+C:\Users\Danil\source\repos\Homework\Battleship\BattleShip\bin\Debug\BattleShip.exe
+C:\Users\Danil\source\repos\Homework\Battleship\BattleShip\bin\Debug\BattleShip.pdb
+C:\Users\Danil\source\repos\Homework\Battleship\BattleShip\obj\Debug\BattleShip.csprojAssemblyReference.cache
+C:\Users\Danil\source\repos\Homework\Battleship\BattleShip\obj\Debug\BattleShip.csproj.CoreCompileInputs.cache
+C:\Users\Danil\source\repos\Homework\Battleship\BattleShip\obj\Debug\BattleShip.exe
+C:\Users\Danil\source\repos\Homework\Battleship\BattleShip\obj\Debug\BattleShip.pdb

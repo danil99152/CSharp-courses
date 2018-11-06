@@ -6,31 +6,60 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class User: Meneger<User, Bot> 
+    public class User: ShipGenerator
     {
         public User()
         {
             Number = 0;
-            Four<User>();
-            while (Number < three)
+            Four(UserField);
+            while (Number < 2)
             {
-                Three<User>();
+                Three(UserField);
             }
             Number = 0;
-            while (Number < two)
+            while (Number < 3)
             {
-                Two<User>();
+                Two(UserField);
             }
             Number = 0;
-            while (Number < one)
+            while (Number < 4)
             {
-                One<User>();
+                One(UserField);
             }
+        }
+
+        public bool HitByUser(int i, int j)
+        {
+            if (BotField[i, j] == 0)
+            {
+                BotField[i, j] = 3;
+                ShipField[i, j] = 3;
+                Output(ShipField);
+                Console.SetCursorPosition(30, 0);
+                Console.WriteLine("Промах!");
+                return false;
+            }
+            if (BotField[i, j] == 1)
+            {
+                BotField[i, j] = 2;
+                ShipField[i, j] = 2;
+                Stroke(BotField, i, j);
+                Output(ShipField);
+                Console.SetCursorPosition(30, 0);
+                Console.WriteLine("Попадание!");
+                return true;
+            }
+            Console.SetCursorPosition(30, 0);
+            Console.WriteLine("Нельзя стрелять в эту клетку");
+            Console.SetCursorPosition(30, 4);
+            Console.WriteLine();
+            Step--;
+            return true;
         }
 
         public void Strike()
         {
-            if (Win<User>())
+            if (Win())
             {
                 return;
             }
@@ -88,11 +117,22 @@ namespace BattleShip
                 }
             }
             Index[Step] = Convert.ToInt32(Console.ReadLine()) - 1;
-            if (Hit<User>(Index[Step], Letter[Step]))
+            if (HitByUser(Index[Step], Letter[Step]))
             {
                 Points++;
                 Strike();
             }
+        }
+
+        public bool Win()
+        {
+            if (Points == 20)
+            {
+                Console.SetCursorPosition(10, 0);
+                Console.Write("Вы победили!");
+                return true;
+            }
+            return false;
         }
     }
 }
