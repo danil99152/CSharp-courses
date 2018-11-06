@@ -10,6 +10,7 @@ namespace BattleShip
     {
         public Bot()
         {
+            Number = 0;
             Four(BotField);
             while (Number < 2)
             {
