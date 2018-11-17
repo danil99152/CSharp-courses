@@ -12,6 +12,13 @@ namespace BattleShip
         {
             var User = new User();
             var Bot = new Bot();
+            HandlerUser handlerUser = new HandlerUser();
+            HandlerBot handlerBot = new HandlerBot(); 
+            
+            User.HitUser += handlerUser.Message;
+            User.Miss += handlerUser.OutOfTarget; 
+            Bot.HitBot += handlerBot.Message; 
+
             Boolean yes = true;
             while (yes)
             {

@@ -46,6 +46,8 @@
     <Compile Include="Battleship.cs" />
     <Compile Include="Bot.cs" />
     <Compile Include="Field.cs" />
+    <Compile Include="HandlerBot.cs" />
+    <Compile Include="HandlerUser.cs" />
     <Compile Include="ShipGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -28,6 +28,12 @@ namespace BattleShip
             }
         }
 
+        public delegate void MethodContainer();
+
+        public event MethodContainer HitUser;
+
+        public event MethodContainer Miss; 
+
         public bool HitByUser(int i, int j)
         {
             if (BotField.field[i, j] == 0)
@@ -35,8 +41,7 @@ namespace BattleShip
                 BotField.field[i, j] = 3;
                 ShipField.field[i, j] = 3;
                 Output(ShipField.field);
-                Console.SetCursorPosition(30, 0);
-                Console.WriteLine("Промах!");
+                Miss();
                 return false;
             }
             if (BotField.field[i, j] == 1)
@@ -45,8 +50,7 @@ namespace BattleShip
                 ShipField.field[i, j] = 2;
                 Stroke(BotField.field, i, j);
                 Output(ShipField.field);
-                Console.SetCursorPosition(30, 0);
-                Console.WriteLine("Попадание!");
+                HitUser();
                 return true;
             }
             Console.SetCursorPosition(30, 0);
