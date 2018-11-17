@@ -17,9 +17,10 @@ namespace BattleShip
         public static int Indent = 2;
         public int Number = 0;
 
-        protected static int[,] BotField = new int[10, 10];
-        public int[,] ShipField = new int[10, 10];
-        protected static int[,] UserField = new int[10, 10];
+  
+        protected static Field BotField = new Field();
+        public Field ShipField = new Field();
+        protected static Field UserField = new Field();
 
         public void Output(int[,] Field)
         {
@@ -42,7 +43,7 @@ namespace BattleShip
                 for (int j = 0; j < 10; j++)
                 {
                     Console.SetCursorPosition(2 * j + 3, i + 1);
-                    Part(UserField[i, j]);
+                    Part(UserField.field[i, j]);
                 }
             }
             for (int i = 0; i < 10; i++)
@@ -149,7 +150,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            ShipField[k, l] = 3;
+                            ShipField.field[k, l] = 3;
                         }
                     }
                 }
@@ -218,7 +219,7 @@ namespace BattleShip
                         if (Field[l, k] != 2)
                         {
                             Field[l, k] = 3;
-                            ShipField[l, k] = 3;
+                            ShipField.field[l, k] = 3;
                         }
                     }
                 }
@@ -242,7 +243,7 @@ namespace BattleShip
                         if (Field[k, l] != 2)
                         {
                             Field[k, l] = 3;
-                            ShipField[k, l] = 3;
+                            ShipField.field[k, l] = 3;
                         }
                     }
                 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    public class PlayerAttribute : Attribute
+    public class Field
     {
+        public int[,] field = new int[10, 10];
     }
 }

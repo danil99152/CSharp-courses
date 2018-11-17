@@ -8,72 +8,44 @@ namespace BattleShip
 {
     public class Bot : ShipGenerator
     {
-        /*  public Bot()
-            {
-                Number = 0;
-                Four(BotField);
-                while (Number < 2)
-                {
-                    Three(BotField);
-                }
-                Number = 0;
-                while (Number < 3)
-                {
-                    Two(BotField);
-                }
-                Number = 0;
-                while (Number < 4)
-                {
-                    One(BotField);
-                }
-            } */
-
-        ShipRepository repository = new ShipRepository();
         public Bot()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            repository.InitShips();
-=======
-=======
->>>>>>> parent of f9396fd... Сброс улучшен
-            Four(BotField);
+            Number = 0;
+            Four(BotField.field);
             while (Number < 2)
             {
-                Three(BotField);
+                Three(BotField.field);
             }
             Number = 0;
             while (Number < 3)
             {
-                Two(BotField);
+                Two(BotField.field);
             }
             Number = 0;
             while (Number < 4)
             {
-                One(BotField);
+                One(BotField.field);
             }
->>>>>>> parent of f9396fd... Сброс улучшен
         }
-        
 
         public bool HitByBot(int i, int j)
         {
-            if (UserField[i, j] == 0)
+            if (UserField.field[i, j] == 0)
             {
-                ShipField[i, j] = 3;
-                UserField[i, j] = 3;
+                ShipField.field[i, j] = 3;
+                UserField.field[i, j] = 3;
                 return false;
             }
-            if (UserField[i, j] == 1)
+            if (UserField.field[i, j] == 1)
             {
-                ShipField[i, j] = 2;
-                UserField[i, j] = 2;
-                Stroke(UserField, i, j);
+                ShipField.field[i, j] = 2;
+                UserField.field[i, j] = 2;
+                Stroke(UserField.field, i, j);
                 Console.SetCursorPosition(30, 0);
                 Console.WriteLine("Противник попал!");
                 return true;
             }
-            if (UserField[i, j] > 1)
+            if (UserField.field[i, j] > 1)
             {
                 return false;
             }
@@ -102,7 +74,7 @@ namespace BattleShip
             var random = new Random(DateTime.Now.Millisecond);
             Letter[Step] = random.Next(9);
             Index[Step] = random.Next(9);
-            if (ShipField[Index[Step], Letter[Step]] > 0)
+            if (ShipField.field[Index[Step], Letter[Step]] > 0)
             {
                 Random();
             }

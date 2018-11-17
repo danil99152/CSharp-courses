@@ -10,8 +10,6 @@ namespace BattleShip
     {
         public static void Main(string[] args)
         {
-            //    ShipRepository repository = new ShipRepository();
-            //    repository.InitShips();
             var User = new User();
             var Bot = new Bot();
             Boolean yes = true;
@@ -19,7 +17,7 @@ namespace BattleShip
             {
                 while (true)
                 {
-                    User.Output(User.ShipField);
+                    User.Output(User.ShipField.field);
                     User.Strike();
                     if (User.Win())
                     {

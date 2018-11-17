@@ -8,49 +8,43 @@ namespace BattleShip
 {
     public class User: ShipGenerator
     {
-        /* public User()
-           {
-               Number = 0;
-               Four(UserField);
-               while (Number < 2)
-               {
-                   Three(UserField);
-               }
-               Number = 0;
-               while (Number < 3)
-               {
-                   Two(UserField);
-               }
-               Number = 0;
-               while (Number < 4)
-               {
-                   One(UserField);
-               }
-           } */
-
-        ShipRepository repository = new ShipRepository();
         public User()
         {
-            repository.InitShips();
+            Number = 0;
+            Four(UserField.field);
+            while (Number < 2)
+            {
+                Three(UserField.field);
+            }
+            Number = 0;
+            while (Number < 3)
+            {
+                Two(UserField.field);
+            }
+            Number = 0;
+            while (Number < 4)
+            {
+                One(UserField.field);
+            }
         }
 
         public bool HitByUser(int i, int j)
         {
-            if (BotField[i, j] == 0)
+            if (BotField.field[i, j] == 0)
             {
-                BotField[i, j] = 3;
-                ShipField[i, j] = 3;
-                Output(ShipField);
+                BotField.field[i, j] = 3;
+                ShipField.field[i, j] = 3;
+                Output(ShipField.field);
                 Console.SetCursorPosition(30, 0);
                 Console.WriteLine("Промах!");
                 return false;
             }
-            if (BotField[i, j] == 1)
+            if (BotField.field[i, j] == 1)
             {
-                BotField[i, j] = 2;
-                ShipField[i, j] = 2;
-                Stroke(BotField, i, j);
-                Output(ShipField);
+                BotField.field[i, j] = 2;
+                ShipField.field[i, j] = 2;
+                Stroke(BotField.field, i, j);
+                Output(ShipField.field);
                 Console.SetCursorPosition(30, 0);
                 Console.WriteLine("Попадание!");
                 return true;
