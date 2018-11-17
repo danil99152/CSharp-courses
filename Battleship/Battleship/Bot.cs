@@ -32,8 +32,11 @@ namespace BattleShip
         public Bot()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             repository.InitShips();
 =======
+=======
+>>>>>>> parent of f9396fd... Сброс улучшен
             Four(BotField);
             while (Number < 2)
             {
